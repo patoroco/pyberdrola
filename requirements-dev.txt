@@ -1,0 +1,6 @@
+-r requirements.txt
+
+ipython
+autopep8==1.4.4
+flake8==3.7.7
+flake8-quotes==2.0.1
