@@ -1,5 +1,6 @@
 import setuptools
-from version import VERSION
+
+from pyberdrola import __version__
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -22,7 +23,7 @@ def get_requirements():
 
 setuptools.setup(
     name="pyberdrola",
-    version=VERSION,
+    version=__version__,
     author="Jorge Maroto",
     author_email="patoroco@gmail.com",
     description="A client for the Iberdrola API",

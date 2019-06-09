@@ -7,7 +7,7 @@ import sys
 
 from pyberdrola.pyberdrola import PyBerdrola
 from pyberdrola.utils import JSONUtils
-from version import VERSION
+from pyberdrola import __version__
 
 
 def get_auth_info():
@@ -28,7 +28,7 @@ def parser():
 
     parser.add_argument("command", help="Command to run",
                         choices=["last", "all"])
-    parser.add_argument("--version", action="version", version=VERSION)
+    parser.add_argument("--version", action="version", version=__version__)
 
     return parser
 
