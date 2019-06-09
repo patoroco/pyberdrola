@@ -47,6 +47,14 @@ class PyBerdrola:
             URL_LAST_INVOICE, headers=self._headers_for_request())
         return req_last_invoice.json()
 
+    def all_invoices(self):
+        """
+        Returns a list of all available invoices
+        """
+        URL_LIST = "https://www.iberdrola.es/webcli/appesp/facturas/lista"
+        req_list = requests.post(URL_LIST, headers=self._headers_for_request())
+        return req_list.json()
+
     def download_invoice(self, invoice, save=False, file_name=None):
         """
         Returns all information about the selected invoice. It"s also possible to download the PDF with this data.
@@ -60,6 +68,7 @@ class PyBerdrola:
                                      }))
 
         download_res = req_download.json()
+
         if save:
             file_name = file_name or download_res["nombrePdf"]
             B64Utils.file_from_base64(
@@ -69,11 +78,3 @@ class PyBerdrola:
         # As this result could be printed, I'm overriding temporally
         download_res["pdfData"] = "*********removed*********"
         return download_res
-
-    def list_invoices(self):
-        """
-        Returns a list of all available invoices
-        """
-        URL_LIST = "https://www.iberdrola.es/webcli/appesp/facturas/lista"
-        req_list = requests.post(URL_LIST, headers=self._headers_for_request())
-        return req_list.json()
