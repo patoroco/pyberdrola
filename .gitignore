@@ -1,0 +1,9 @@
+.DS_Store
+.vscode
+
+build
+dist
+*egg-info
+__pycache__
+
+invoices/
