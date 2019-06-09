@@ -2,15 +2,16 @@ pyberdrola [![](https://badge.fury.io/py/pyberdrola.svg)](https://pypi.org/proje
 ==========
 **pyberdrola** allows to get info and invoices about the electric consumption.
 
-This info is obtained from the iberdrola.es using the same APIs that iOS app is using.
+This info is obtained from the www.iberdrola.es using the same APIs that iOS app is using,
+but in an easy way.
 
 
 Installation
 ------------
-**pyberdrola** is [available at pypi](https://pypi.org/project/pyberdrola/), so you can install it using `pip`.
+**pyberdrola** is [available at pypi](https://pypi.org/project/pyberdrola/), so you can install it using `pip3` (it requires Python3).
 
 ```bash
-pip install pyberdrola
+pip3 install pyberdrola
 ```
 
 

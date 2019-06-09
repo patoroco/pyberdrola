@@ -26,7 +26,7 @@ setuptools.setup(
     version=__version__,
     author="Jorge Maroto",
     author_email="patoroco@gmail.com",
-    description="A client for the Iberdrola API",
+    description="A client to use www.iberdrola.es from the terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/patoroco/pyberdrola",
